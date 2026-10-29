@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Receptes casolanes i menú per demanar en línia.">
+  <title>Cuina de casa | Receptes casolanes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="inici">
+    <div class="header-inner">
+      <a class="brand" href="#inici" aria-label="Cuina de casa, inici">
+        <span class="brand-icon" aria-hidden="true">🍋</span>
+        <span>Cuina <em>de casa</em></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegació principal">
+        <a href="#entrants">Entrants</a>
+        <a href="#plats">Plats principals</a>
+        <a href="#postres">Postres</a>
+        <a class="nav-order" href="#comanda">
+          Demanar menú <span lang="es">/ Pedir menú</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Receptes fetes amb estima</p>
+        <h1 id="hero-title">Bon menjar,<br><span>bons moments.</span></h1>
+        <p>
+          Idees senzilles, ingredients frescos i aquell gust de cuina
+          casolana que sempre ve de gust.
+        </p>
+        <a class="button" href="#receptes">
+          Descobreix les receptes <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div
+        class="hero-art"
+        aria-label="Il·lustració d'un plat de pasta amb tomàquets i alfàbrega"
+        role="img"
+      >
+        <span class="art-sun" aria-hidden="true">✳</span>
+        <span class="art-leaf leaf-one" aria-hidden="true">❧</span>
+        <span class="art-leaf leaf-two" aria-hidden="true">❧</span>
+        <div class="plate">
+          <div class="pasta">🍝</div>
+          <span class="tomato tomato-one">🍅</span>
+          <span class="tomato tomato-two">🍃</span>
+        </div>
+        <span class="art-caption">Fresc · fàcil · boníssim</span>
+      </div>
+    </section>
+
+    <section class="recipes section-wrap" id="receptes" aria-labelledby="recipes-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Què et ve de gust avui?</p>
+          <h2 id="recipes-title">Receptes de temporada</h2>
+        </div>
+        <p>Tria una categoria i troba la teva pròxima recepta preferida.</p>
+      </div>
+
+      <div class="category-links" aria-label="Categories de receptes">
+        <a href="#entrants">🥗 Entrants</a>
+        <a href="#plats">🍲 Plats principals</a>
+        <a href="#postres">🍰 Postres</a>
+      </div>
+
+      <div class="recipe-grid">
+        <article class="recipe-card" id="entrants">
+          <div class="recipe-art art-green" aria-hidden="true">
+            🥗<span class="art-label">FRESC I LLEUGER</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-type">Entrant · 15 min</p>
+            <h3>Amanida de l'hort</h3>
+            <p>Tomàquet, cogombre, formatge tendre i una vinagreta de llimona.</p>
+            <a href="#comanda">Veure la recepta <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="recipe-card" id="plats">
+          <div class="recipe-art art-orange" aria-hidden="true">
+            🍝<span class="art-label">FAVORIT DE CASA</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-type">Plat principal · 30 min</p>
+            <h3>Pasta amb tomàquet</h3>
+            <p>Pasta al dente amb salsa de tomàquet casolana i alfàbrega fresca.</p>
+            <a href="#comanda">Veure la recepta <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="recipe-card" id="postres">
+          <div class="recipe-art art-pink" aria-hidden="true">
+            🍰<span class="art-label">UN TOC DOLÇ</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-type">Postres · 45 min</p>
+            <h3>Pastís de llimona</h3>
+            <p>Esponjós, cítric i perfecte per compartir després de dinar.</p>
+            <a href="#comanda">Veure la recepta <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="order-section" id="comanda" aria-labelledby="order-title">
+      <div class="order-intro">
+        <p class="eyebrow">De la nostra cuina a casa teva</p>
+        <h2 id="order-title">Demana el teu menú</h2>
+        <p>
+          Omple el formulari i prepara't per gaudir.
+          <span lang="es">Rellena el formulario para hacer tu pedido.</span>
+        </p>
+        <div class="order-note">
+          <span aria-hidden="true">🛵</span>
+          <div>
+            <strong>Preparat al moment</strong><br>
+            Ingredients frescos, cada dia.
+          </div>
+        </div>
+      </div>
+
+      <form class="order-form" action="#comanda" method="get">
+        <fieldset>
+          <legend>Tria el teu menú <span lang="es">/ Elige tu menú</span></legend>
+          <label for="menu">Menú del dia <span lang="es">(obligatori)</span></label>
+          <select id="menu" name="menu" required>
+            <option value="" disabled selected>Selecciona una opció</option>
+            <option value="vegetaria">Menú vegetarià · 13,50 €</option>
+            <option value="mediterrania">Menú mediterrani · 15,00 €</option>
+            <option value="infantil">Menú infantil · 9,00 €</option>
+          </select>
+
+          <div class="form-row">
+            <div>
+              <label for="quantitat">Quantitat</label>
+              <input id="quantitat" name="quantitat" type="number" min="1" max="12" value="1" required>
+            </div>
+            <div>
+              <label for="hora">Hora de lliurament</label>
+              <input id="hora" name="hora" type="time" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dades de lliurament <span lang="es">/ Datos de entrega</span></legend>
+          <div class="form-row">
+            <div>
+              <label for="nom">Nom <span lang="es">/ Nombre</span></label>
+              <input id="nom" name="nom" type="text" autocomplete="name" placeholder="El teu nom" required>
+            </div>
+            <div>
+              <label for="telefon">Telèfon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="600 000 000" required>
+            </div>
+          </div>
+
+          <label for="adreca">Adreça <span lang="es">/ Dirección</span></label>
+          <input id="adreca" name="adreca" type="text" autocomplete="street-address" placeholder="Carrer, número i pis" required>
+
+          <label for="notes">
+            Al·lèrgies o instruccions especials
+            <span lang="es">/ Alergias o instrucciones</span>
+          </label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Explica'ns com podem ajudar-te..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mètode de pagament <span lang="es">/ Método de pago</span></legend>
+          <div class="payment-options">
+            <label><input type="radio" name="pagament" value="targeta" required> Targeta</label>
+            <label><input type="radio" name="pagament" value="efectiu"> Efectiu</label>
+          </div>
+        </fieldset>
+
+        <button class="button submit-button" type="submit">
+          Enviar comanda <span lang="es">/ Enviar pedido</span> <span aria-hidden="true">→</span>
+        </button>
+        <p class="form-hint">
+          Aquest formulari és una demostració escolar; les dades no s'envien a cap restaurant.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#inici">
+      <span aria-hidden="true">🍋</span>
+      <span>Cuina <em>de casa</em></span>
+    </a>
+    <p>Receptes senzilles per gaudir cada dia.</p>
+    <small>© 2026 Cuina de casa · Fet amb estima</small>
+  </footer>
+</body>
+</html>
